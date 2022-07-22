@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+        /* Text */
+        --Pale-Violet-sub-heading-at-the-top-of-the-app-UI: hsl(276, 100%, 81%);
+        --Moderate-Violet-chat-on-the-left: hsl(276, 55%, 52%);
+        --Desaturated-Dark-Violet-chat-on-the-right: hsl(271, 15%, 43%);
+        --Grayish-Blue-placeholder-text: hsl(206, 6%, 79%);
+        --Very-Dark-Desaturated-Violet-main-heading: hsl(271, 36%, 24%);
+        --Dark-Grayish-Violet-paragraph: hsl(270, 7%, 64%);
+
+        /* Secondary */
+        --White: hsl(0, 0%, 100%);
+        --Light-Grayish-Violet-app-background: hsl(270, 20%, 96%);
+        --Very-Dark-Desaturated-Violet-submit-button-background: hsl(271, 36%, 24%);
+        --Very-Light-Magenta-radio-button-outline: hsl(289, 100%, 72%);
+
+        --linear-gradient-color: linear-gradient(hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+}
+
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+}
+
+html {
+        font-size: 80%;
+}
+
+body {
+        position: relative;
+        display: grid;
+        place-items: center;
+        width: 100vw;
+        min-height: 100vh;
+        font-family: 'Rubik', sans-serif;
+        animation: animate 1s ease-in-out;
+        transition: 0.5s;
+}
+
+@keyframes animate {
+        0% {
+                opacity: 0;
+                transform: rotateX(-30deg);
+        }
+        100% {
+                opacity: 1;
+                transform: rotateX(0);
+        }
+}
+
+.bg {
+        position: absolute;
+        width: 100%;
+        min-height: 100vh;
+        overflow: hidden;
+}
+
+.left_top_corner{
+        position: absolute;
+        top: 0;
+        left: -7%;
+        z-index: 0;
+        min-height: 43rem;
+        width: 32%;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        background: linear-gradient(to top right, hsl(264, 100%, 61%) 1%,hsl(293, 100%, 63%));
+}
+
+.right_upside_down {
+        position: absolute;
+        right: -10%;
+        bottom: 0;
+        width: 32%;
+        min-height: 43rem;
+        transform: rotate(180deg);
+        opacity: 0.06;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        background: linear-gradient(to top right, hsl(264, 100%, 61%) 1%,hsl(293, 100%, 63%));
+}
+
+.chat_app_promotion {
+        position: relative;
+        z-index: 20;
+        width: 72rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+.screen_container {
+        width: 44rem;
+        padding: 0.6rem;
+        margin-left: 4.3rem;
+        border-radius: 30px;
+        background-color: var(--White);
+        box-shadow: 15px 15px 20px rgb(231, 231, 231);
+        overflow: hidden;
+}
+
+.screen {
+        border-radius: 25px;
+        background-color: var(--Light-Grayish-Violet-app-background);
+}
+
+.top_section_chat_mate {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 1.8rem 1rem 0.8rem 1rem;
+        border-radius: 25px 25px 8px 8px;
+        background: linear-gradient(-90deg, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+}
+
+.top_section_chat_mate::after {
+        content: '';
+        display: flex;
+        position: absolute;
+        top: 0.5rem;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 8rem;
+        height: 1.2rem;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        background-color: var(--White);
+}
+
+.profile {
+        position: relative;
+        display: flex;
+        width: 15%;
+        margin-left: 0.5rem;
+        border-radius: 50%;
+        border: 1px solid var(--White);
+        overflow: hidden;
+}
+
+.avatar {
+        width: 100%;
+        height: 100%;
+}
+
+.top_section_chat_mate .back_btn{
+        width: 0.3rem;
+        height: 0.7rem;
+}
+
+.name_and_activity {
+        width: 100%;
+        margin-left: 0.5rem;
+}
+
+.name_and_activity .name {
+        color: var(--White);
+        font-size: 0.7rem;
+        font-weight: 400;
+        margin-bottom: 2px;
+}
+
+.name_and_activity .activity_status {
+        font-size: 0.5rem;
+        font-weight: 400;
+        color: var(--Pale-Violet-sub-heading-at-the-top-of-the-app-UI);
+}
+
+.top_section_chat_mate .info_btn {
+        width: 0.140rem;
+}
+
+.body_section_chat {
+        position: relative;
+        padding: 0.7rem 0.6rem 0.6rem 0.6rem;
+        border-radius: 8px;
+        overflow: hidden;
+}
+
+.column1 {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+}
+
+.receiver {
+        padding: 0.5rem;
+        border-radius: 8px;
+        border-bottom-left-radius: 4px;
+        background-color: hsla(270, 7%, 64%, 0.2);
+}
+
+.receiver.message1, 
+.receiver.message2 {
+        width: 8rem;
+}
+
+.receiver p {
+        text-align: start;
+        font-size: 0.490rem;
+        color: var(--Moderate-Violet-chat-on-the-left);
+}
+
+.receiver p, 
+.sender p {
+        line-height: 1.4;
+}
+
+.column2 {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        gap: 0.4rem;
+        margin-top: 1rem;
+}
+
+.images {
+        display: flex;
+        gap: 0.6rem;
+}
+
+.images img {
+        width: 2.5rem;
+        border-radius: 8px;
+}
+
+.sender {
+        padding: 0.5rem;
+        border-radius: 8px;
+        border-bottom-right-radius: 4px;
+        background-color: var(--White);
+        box-shadow: 10px 10px 15px rgb(221, 221, 221);
+}
+
+.sender p {
+        text-align: start;
+        font-size: 0.490rem;
+        color: var(--Desaturated-Dark-Violet-chat-on-the-right);
+}
+
+.sender.message1 {
+        width: 8rem;
+}
+
+.column3 {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        margin-top: 0.8rem;
+}
+
+.receiver.message3 {
+        width: 7.8rem;
+}
+
+.booking_prices {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+}
+
+.booking_prices .option {
+        width: 10rem;
+        display: flex;
+        align-items: center;
+        padding: 0.5rem 0.1rem 0.5rem 0.2rem;
+        border-radius: 10px;
+        border-bottom-left-radius: 4px;
+        background: linear-gradient(to right, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+}
+
+.option label {
+        font-size: 0.5rem
+}
+
+.option label .price {
+        font-size: 0.750rem;
+        font-weight: 700;
+        margin-left: 2.5rem;
+}
+
+.option.two .price {
+        margin-left: 3.4rem;
+}
+
+.option label, 
+.option h2 {
+        color: var(--White);
+}
+
+.option input[type="checkbox"] {
+        display: none;
+}
+
+.option label {
+        position: relative;
+        margin-left: 1.5rem;
+}
+
+.option label::before {
+        content: '';
+        background-image: url(images/Check-btn.png);
+        background-position: center;
+        background-size: contain;
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        top: 1px;
+        left: -1rem;
+        transform: scale(0);
+        transition: all 0.4s;
+}
+
+.option label::after {
+        content: '';
+        position: absolute;
+        top: 1px;
+        left: -1rem;
+        width: 8px;
+        height: 8px;
+        border: 1px solid #fff;
+        border-radius: 50%;
+}
+
+.option input[type="checkbox"]:checked + label::before {
+        transform: scale(1);
+}
+
+.column4 {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+input[type="text"] {
+        position: relative;
+        width: 100%;
+        padding: 0.7rem;
+        padding-left: 1.1rem;
+        outline: none;
+        border: none;
+        border-radius: 20px;
+        margin-top: 1rem;
+}
+
+input[type="text"]::placeholder {
+        font-size: 0.490rem;
+        font-family: 'Rubik', sans-serif;
+        color: var(--Grayish-Blue-placeholder-text);
+}
+
+.send_button {
+        position: absolute;
+        top: 1.450rem;
+        right: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 22px;
+        height: 22px;
+        padding: 0.6rem;
+        border-radius: 50%;
+        background-color: var(--Very-Dark-Desaturated-Violet-submit-button-background);
+}
+
+.send_btn {
+        width: 6px;
+}
+
+.booking_chat_app_description {
+        margin-left: 8rem;
+        line-height: 1.5;
+}
+
+.header {
+        font-size: 3rem;
+        font-weight: 500;
+        color: var(--Very-Dark-Desaturated-Violet-main-heading);
+        margin-bottom: 1.5rem;
+}
+
+.booking_chat_app_description p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+        color: var(--Dark-Grayish-Violet-paragraph);
+        padding-right: 12rem;
+}
+
+.attribution {
+        position: absolute;
+        bottom: 10px;
+        font-size: 11px; 
+        text-align: center; 
+}
+
+.attribution a { 
+        color: hsl(228, 45%, 44%); 
+}
+
+@media (max-width: 925px) {
+        html {
+                font-size: 75%;
+        }
+
+        .bg {
+                overflow: hidden;
+        }
+
+        .bg > * {
+                width: 30rem;
+        }
+
+        .chat_app_promotion {
+                align-items: center;
+                justify-content: center;
+                width: 95%;
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                /* margin-top: 2rem; */
+        }
+
+        .screen_container {
+                width: 16rem;
+                margin: 0;
+        }
+
+        .booking_chat_app_description {
+                margin-left: 0;
+                text-align: center;
+        }
+
+        .booking_chat_app_description .header {
+                font-size: 2rem;
+                margin-bottom: 0;
+        }
+
+        .booking_chat_app_description .description{
+                font-size: 1rem;
+                padding: 0 10rem;
+        }
+}
+
+@media (max-width: 637px) {
+        .chat_app_promotion {
+                margin: 2% 0;
+        }
+
+        .left_top_corner {
+                top: -11rem;
+                left: -18rem;
+        }
+
+        .right_upside_down {
+                bottom: -20rem;
+                right: -18rem;
+        }
+
+        .booking_chat_app_description .description{
+                font-size: 1rem;
+                padding: 0 4rem;
+        }
+}
+
+@media (max-width: 425px) {
+        .attribution {
+                display: none;
+        }
+}
+
+@media (max-width: 334px) {
+        .chat_app_promotion {
+                gap: 0;
+        }
+
+        .left_top_corner {
+                top:  -10rem;
+                left: -20rem;
+        }
+
+        .right_upside_down {
+                bottom:  -10rem;
+        }
+
+        .booking_chat_app_description .description{
+                padding: 0 0.5rem;
+        }
+}
